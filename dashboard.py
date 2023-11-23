@@ -57,8 +57,6 @@ group_df2["% AVANCE"] = group_df2["SBO"]/group_df2["OBJ"]*100
 st.header("_SAFE TRAVEL FV_", divider='grey')
 st.table(group_df2)
 
-locale.setlocale(locale.LC_TIME, 'es_ES')
-
 df2['PERIODO'] = pd.to_datetime(df2['PERIODO'], format='%Y%m')
 df2['PERIODO'] = df2['PERIODO'].dt.strftime('%b').str.upper()
 month_order = [
